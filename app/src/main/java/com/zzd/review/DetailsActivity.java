@@ -24,6 +24,8 @@ public class DetailsActivity extends AppCompatActivity {
         add = findViewById(R.id.btn_add);
 
         final Intent intent = getIntent();
+        Intent intent2 = new Intent(this,MusicService.class);
+        startService(intent2);
         mBookInfo = (BookInfo) intent.getSerializableExtra("items");
         if (mBookInfo != null) {
             name.setText(mBookInfo.getName());
@@ -34,6 +36,12 @@ public class DetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }

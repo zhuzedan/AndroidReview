@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
                 BookInfo bookInfo = mBookInfos.get(position);
                 String name = bookInfo.getName();
                 Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
