@@ -1,5 +1,5 @@
 [
-  {"name":"123","publish":"人民教育出版社","price": "234"},
-  {"name":"456","publish":"人民教育出版社","price": "567"},
-  {"name":"789","publish":"人民教育出版社","price": "543"}
+  {"name":"123","publish":"人民教育出版社","price": "234","img": "https://s1.ax1x.com/2022/06/03/XUcwrR.jpg"},
+  {"name":"456","publish":"人民教育出版社","price": "567","img": "https://s1.ax1x.com/2022/06/03/XUc0q1.jpg"},
+  {"name":"789","publish":"人民教育出版社","price": "543","img": "https://s1.ax1x.com/2022/06/03/XUcdM9.jpg"}
 ]

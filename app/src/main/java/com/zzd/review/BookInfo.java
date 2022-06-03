@@ -8,14 +8,14 @@ public class BookInfo implements Serializable {
     private String name;
     private String publish;
     private String price;
+    private String img;
 
-    @Override
-    public String toString() {
-        return "BookInfo{" +
-                "name='" + name + '\'' +
-                ", publish='" + publish + '\'' +
-                ", price='" + price + '\'' +
-                '}';
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 
     public String getName() {

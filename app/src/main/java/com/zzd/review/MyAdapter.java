@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -38,17 +39,37 @@ public class MyAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         //创建视图控件
-        convertView = mLayoutInflater.inflate(R.layout.item,parent,false);
+        ViewHolder viewHolder = new ViewHolder();
+        if (convertView == null){
+            convertView = mLayoutInflater.inflate(R.layout.item,parent,false);
+            TextView tv_name = convertView.findViewById(R.id.tv_name);
+            TextView tv_publish = convertView.findViewById(R.id.tv_publish);
+            TextView tv_price = convertView.findViewById(R.id.tv_price);
 
-        TextView tv_name = convertView.findViewById(R.id.tv_name);
-        TextView tv_publish = convertView.findViewById(R.id.tv_publish);
-        TextView tv_price = convertView.findViewById(R.id.tv_price);
+            viewHolder.tv_name = tv_name;
+            viewHolder.tv_publish = tv_publish;
+            viewHolder.tv_price = tv_price;
+
+            convertView.setTag(viewHolder);
+        }else {
+            viewHolder = (ViewHolder) convertView.getTag();
+        }
+
         //为控件提供数据
         BookInfo bookInfo = mBookInfos.get(position);
-        tv_name.setText("图书名："+bookInfo.getName());
-        tv_publish.setText("出版社："+bookInfo.getPublish());
-        tv_price.setText("价格："+bookInfo.getPrice());
+        int resID = 1;
+        viewHolder.tv_name.setText("图书名："+bookInfo.getName());
+        viewHolder.tv_publish.setText("出版社："+bookInfo.getPublish());
+        viewHolder.tv_price.setText("价格："+bookInfo.getPrice());
 
         return convertView;
+    }
+    class ViewHolder {
+        //暂存控件
+        TextView tv_name;
+        TextView tv_publish;
+        TextView tv_price;
+
+
     }
 }

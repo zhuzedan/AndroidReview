@@ -20,7 +20,7 @@ public class DetailsActivity extends AppCompatActivity {
         name = findViewById(R.id.name);
         publish = findViewById(R.id.publish);
         price = findViewById(R.id.price);
-        back = findViewById(R.id.btn_add);
+        back = findViewById(R.id.btn_back);
         add = findViewById(R.id.btn_add);
 
         final Intent intent = getIntent();
@@ -30,6 +30,11 @@ public class DetailsActivity extends AppCompatActivity {
             publish.setText(mBookInfo.getPublish());
             price.setText(mBookInfo.getPrice());
         }
-
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
