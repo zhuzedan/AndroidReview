@@ -4,12 +4,12 @@
 期末安卓上机考复习
 
 #### 考点
-布局
-1. activity
-2. json解析
-3. baseadapter
-4. service
-5. sqlite
+1. 布局
+2. activity
+3. json解析
+4. baseadapter
+5. service
+6. sqlite
 
 #### 大体分值分配
 1. 界面写出来  20
