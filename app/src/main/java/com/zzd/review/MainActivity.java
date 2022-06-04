@@ -56,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
 }
 /*
  * 1界面写出来  20
