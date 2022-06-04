@@ -9,7 +9,7 @@ baseadapter
 service
 sqlite
 
-####大体分值分配
+#### 大体分值分配
 1界面写出来  20
 2将数据呈现出来 json解析and adapter  30
 3通信跳转 点击进入详情页，并有数据  listview的点击事件  15
