@@ -45,10 +45,12 @@ public class MyAdapter extends BaseAdapter {
             TextView tv_name = convertView.findViewById(R.id.tv_name);
             TextView tv_publish = convertView.findViewById(R.id.tv_publish);
             TextView tv_price = convertView.findViewById(R.id.tv_price);
+            ImageView img = convertView.findViewById(R.id.img);
 
             viewHolder.tv_name = tv_name;
             viewHolder.tv_publish = tv_publish;
             viewHolder.tv_price = tv_price;
+            viewHolder.img = img;
 
             convertView.setTag(viewHolder);
         }else {
@@ -61,7 +63,8 @@ public class MyAdapter extends BaseAdapter {
         viewHolder.tv_name.setText("图书名："+bookInfo.getName());
         viewHolder.tv_publish.setText("出版社："+bookInfo.getPublish());
         viewHolder.tv_price.setText("价格："+bookInfo.getPrice());
-
+        int[] imageViews = {R.drawable.photo,R.drawable.andy,R.drawable.bill};
+        viewHolder.img.setBackgroundResource(imageViews[position]);
         return convertView;
     }
     class ViewHolder {
@@ -69,7 +72,6 @@ public class MyAdapter extends BaseAdapter {
         TextView tv_name;
         TextView tv_publish;
         TextView tv_price;
-
-
+        ImageView img;
     }
 }

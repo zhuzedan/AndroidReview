@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private List<BookInfo> mBookInfos;
     private ListView mListView;
     private MyAdapter myAdapter;
+//    private int[] imageViews = {R.drawable.ic_launcher_background,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                BookInfo bookInfo = mBookInfos.get(position);
-                String name = bookInfo.getName();
-                Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
-                intent.putExtra("items",bookInfo);
-                startActivity(intent);
-                Toast.makeText(MainActivity.this,name,Toast.LENGTH_LONG).show();
+            BookInfo bookInfo = mBookInfos.get(position);
+            String name = bookInfo.getName();
+            Intent intent = new Intent(MainActivity.this,DetailsActivity.class);
+            intent.putExtra("items",bookInfo);
+            startActivity(intent);
+            Toast.makeText(MainActivity.this,name,Toast.LENGTH_LONG).show();
             }
         });
     }
